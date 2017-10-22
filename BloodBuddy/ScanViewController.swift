@@ -76,10 +76,11 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                
+
                 
                 print(metadataObj.stringValue as! String)
                 performSegue(withIdentifier: "toData", sender: nil)
+                                captureSession?.stopRunning();
             }
         }
     }
