@@ -9,10 +9,12 @@
 import UIKit
 import Alamofire
 import SwiftyUserDefaults
+import FCAlertView
 
 extension DefaultsKeys {
     static let medicalHistory = DefaultsKey<[String]?>("medicalHistory")
     static let locationHistory = DefaultsKey<[String]?>("locationHistory")
+    static let firstDate = DefaultsKey<String?>("firstDate")
 }
 
 class BloodInfoViewController: UIViewController {
@@ -20,6 +22,7 @@ class BloodInfoViewController: UIViewController {
     @IBOutlet weak var bloodTypeLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
+    @IBOutlet weak var donationLocationLabel: UILabel!
     @IBOutlet weak var riskFactorLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
     @IBOutlet weak var drawnDateLabel: UILabel!
@@ -43,16 +46,20 @@ class BloodInfoViewController: UIViewController {
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "MMM. dd, yyyy"
                     let dateString = dateFormatter.string(from:date as Date)
+                    
+                    Defaults[.firstDate] = dateString
+                    
                     self.drawnDateLabel.text = dateString
                     self.sexLabel.text = dictionary["sex"]! as! String
                     self.riskFactorLabel.text =
-                        String(dictionary["riskFactor"]! as! Int) + " %"
+                        String(dictionary["riskFactor"]! as! Int) + "%"
                     
                     var medicalHistory = dictionary["medicalHistory"]! as! String
                     print(medicalHistory)
                     var newArray = medicalHistory
                     newArray = newArray.replacingOccurrences(of: "[", with: "")
                     newArray = newArray.replacingOccurrences(of: "]", with: "")
+                    newArray = newArray.replacingOccurrences(of: "\"", with: "")
                     let fullname : [String] = newArray.components(separatedBy: ",")
                     Defaults[.medicalHistory] = fullname
                     
@@ -61,13 +68,30 @@ class BloodInfoViewController: UIViewController {
                     var newArray1 = locationArray
                     newArray1 = newArray1.replacingOccurrences(of: "[", with: "")
                     newArray1 = newArray1.replacingOccurrences(of: "]", with: "")
+                    newArray1 = newArray1.replacingOccurrences(of: "\"", with: "")
                     let fullname1 : [String] = newArray1.components(separatedBy: ",")
                     Defaults[.locationHistory] = fullname1
                     print(locationArray)
+                    
+                    self.donationLocationLabel.text = fullname1[0].replacingOccurrences(of: "\"", with: "")
+                    
+                    if((dictionary["riskFactor"] as! Int) > 49){
+                        let alert = FCAlertView()
+                        
+                        alert.colorScheme = UIColor(red: 128/255, green: 0/255, blue: 0/255, alpha: 1)
+                        
+                        alert.showAlert(inView: self,
+                                        withTitle: "Critical Alert!",
+                                        withSubtitle: "This blood donation has exceeded the allowed risk factor within this region, proceed with caution!",
+                                        withCustomImage: UIImage(named: "shield"),
+                                        withDoneButtonTitle: nil,
+                                        andButtons: nil)
+                        
+                    }
                 }
             }
             
-   
+            
         }
         // Do any additional setup after loading the view.
     }

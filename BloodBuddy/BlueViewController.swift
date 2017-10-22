@@ -23,11 +23,18 @@ class BlueViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        history = Defaults[.locationHistory]!
         self.tableView.reloadData()
         print("hi")
-        //print(history)
+        print(history)
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        history = []
+        self.tableView.reloadData()
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,12 +56,15 @@ class BlueViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
         cell.textLabel?.text = history[indexPath.row]
-        
+        cell.detailTextLabel?.text = Defaults[.firstDate]!
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100.0;//Choose your custom row height
+    }
     
     /*
      // Override to support conditional editing of the table view.

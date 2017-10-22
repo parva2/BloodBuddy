@@ -12,4 +12,6 @@ target 'BloodBuddy' do
     pod 'Alamofire'
     pod 'QRCode'
     pod 'SkyFloatingLabelTextField'
+    pod 'WhereAmI'
+    pod 'FCAlertView'
 end

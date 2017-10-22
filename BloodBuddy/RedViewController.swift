@@ -23,10 +23,16 @@ class RedViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        history = Defaults[.medicalHistory]!
         self.tableView.reloadData()
         print("hi")
         print(history)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        history = []
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

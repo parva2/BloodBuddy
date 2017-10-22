@@ -15,6 +15,7 @@ class CreateSubmissionPart1VCViewController: FormViewController {
     var sendingHash: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         form +++ Section("Patient Information")
             <<< AlertRow<String>("bloodType") {
                 $0.title = "Blood Type"
@@ -56,6 +57,8 @@ class CreateSubmissionPart1VCViewController: FormViewController {
                 $0.options = ["HIV","Malaria","Viral Hepatitis","None"]
                 //$0.value = "None"    // initially selected
             }
+        
+        
             /**
             +++ MultivaluedSection(multivaluedOptions: [.Reorder, .Insert, .Delete],
                                    header: "Concerning Patient History",
@@ -82,8 +85,10 @@ class CreateSubmissionPart1VCViewController: FormViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @IBAction func nextPressed(_ sender: Any) {
+        
+        
         let valuesDictionary : Dictionary! = form.values()
         print(valuesDictionary)
         
@@ -95,28 +100,26 @@ class CreateSubmissionPart1VCViewController: FormViewController {
         let medicalHistory = valuesDictionary["medicalHistory"]!
         
        var unixDate = date.timeIntervalSince1970
+        let rand = arc4random_uniform(100)
         
+        let locationArray : Set = ["Sands Expo Center", "Orange County Blood Bank"]
         let parameters: Parameters = [
             "bloodType": bloodType!,
             "sex": sex!,
             "ageRange": ageRange!,
             "date": unixDate,
             "amount": amount!,
-            "medicalHistory": medicalHistory!
-            
+            "medicalHistory": medicalHistory!,
+            "riskFactor": rand,
+            "locationHistory": locationArray
         ]
-        let parameters1: Parameters = [
-            "bloodType": bloodType!,
-        ]
+        print(parameters)
         Alamofire.request("https://bloodbuddy-blurjoe.c9users.io:8080/api/createBlood", method: .post, parameters: parameters).responseString { response in
             print(response)
             self.sendingHash = response.result.value!
             self.performSegue(withIdentifier: "toSecond", sender: nil)
-            
         }
-        
-        
-        }
+}
         
     
     

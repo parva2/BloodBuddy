@@ -16,6 +16,7 @@
 		C923F9D81F9C938B00B3B5B8 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F9D71F9C938B00B3B5B8 /* BlueViewController.swift */; };
 		C923F9DA1F9CDF0600B3B5B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C923F9D91F9CDF0600B3B5B8 /* Assets.xcassets */; };
 		C923F9DC1F9CDF6D00B3B5B8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F9DB1F9CDF6D00B3B5B8 /* SearchViewController.swift */; };
+		C923F9DE1F9CE4EF00B3B5B8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C923F9DD1F9CE4EF00B3B5B8 /* MapKit.framework */; };
 		C96805661F9C0FB200EE0FAB /* BloodPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96805651F9C0FB200EE0FAB /* BloodPageViewController.swift */; };
 		C968056A1F9C144F00EE0FAB /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96805691F9C144F00EE0FAB /* ScanViewController.swift */; };
 		C98890881F9BD7400095E6B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98890871F9BD7400095E6B3 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		C923F9D71F9C938B00B3B5B8 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
 		C923F9D91F9CDF0600B3B5B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Library/Messages/Attachments/f9/09/58AAD925-55FF-4AA8-B3F7-B4A3DCEEF14B/Assets.xcassets"; sourceTree = "<group>"; };
 		C923F9DB1F9CDF6D00B3B5B8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C923F9DD1F9CE4EF00B3B5B8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C96805651F9C0FB200EE0FAB /* BloodPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPageViewController.swift; sourceTree = "<group>"; };
 		C96805691F9C144F00EE0FAB /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		C98890841F9BD7400095E6B3 /* BloodBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C923F9CC1F9C1F2A00B3B5B8 /* AVFoundation.framework in Frameworks */,
+				C923F9DE1F9CE4EF00B3B5B8 /* MapKit.framework in Frameworks */,
 				90231DB901D870E676133366 /* Pods_BloodBuddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +119,7 @@
 		CC358886E911F863283ABA08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C923F9DD1F9CE4EF00B3B5B8 /* MapKit.framework */,
 				C923F9CB1F9C1F2200B3B5B8 /* AVFoundation.framework */,
 				C923F9C61F9C19AF00B3B5B8 /* QRCodeReader.framework */,
 				8D6E47DA3E5C1A15317E4524 /* Pods_BloodBuddy.framework */,
@@ -159,6 +163,14 @@
 					C98890831F9BD7400095E6B3 = {
 						CreatedOnToolsVersion = 9.0.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -236,19 +248,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BloodBuddy/Pods-BloodBuddy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/WhereAmI/WhereAmI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WhereAmI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
