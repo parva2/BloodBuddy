@@ -78,7 +78,8 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             if metadataObj.stringValue != nil {
                 
                 
-                print(metadataObj.stringValue as Any)
+                print(metadataObj.stringValue as! String)
+                performSegue(withIdentifier: "toData", sender: nil)
             }
         }
     }
