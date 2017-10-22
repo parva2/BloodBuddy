@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5DBA441F9C33F000A57E9A /* BloodInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5DBA431F9C33F000A57E9A /* BloodInfoViewController.swift */; };
 		90231DB901D870E676133366 /* Pods_BloodBuddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6E47DA3E5C1A15317E4524 /* Pods_BloodBuddy.framework */; };
 		C923F9CC1F9C1F2A00B3B5B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C923F9CB1F9C1F2200B3B5B8 /* AVFoundation.framework */; };
 		C96805661F9C0FB200EE0FAB /* BloodDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96805651F9C0FB200EE0FAB /* BloodDataViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5DBA431F9C33F000A57E9A /* BloodInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodInfoViewController.swift; sourceTree = "<group>"; };
 		0FA03F8AC788910352ADBB98 /* Pods-BloodBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloodBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-BloodBuddy/Pods-BloodBuddy.release.xcconfig"; sourceTree = "<group>"; };
 		8D6E47DA3E5C1A15317E4524 /* Pods_BloodBuddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BloodBuddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EF520E7D0AA1162CC63E57 /* Pods-BloodBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BloodBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BloodBuddy/Pods-BloodBuddy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,11 +88,12 @@
 				C98890891F9BD7400095E6B3 /* FirstViewController.swift */,
 				C988908B1F9BD7400095E6B3 /* SecondViewController.swift */,
 				C988908D1F9BD7400095E6B3 /* Main.storyboard */,
+				0D5DBA431F9C33F000A57E9A /* BloodInfoViewController.swift */,
 				C96805651F9C0FB200EE0FAB /* BloodDataViewController.swift */,
+				C96805691F9C144F00EE0FAB /* ScanViewController.swift */,
 				C98890901F9BD7400095E6B3 /* Assets.xcassets */,
 				C98890921F9BD7400095E6B3 /* LaunchScreen.storyboard */,
 				C98890951F9BD7400095E6B3 /* Info.plist */,
-				C96805691F9C144F00EE0FAB /* ScanViewController.swift */,
 			);
 			path = BloodBuddy;
 			sourceTree = "<group>";
@@ -216,12 +219,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BloodBuddy/Pods-BloodBuddy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
@@ -243,6 +248,7 @@
 				C98890881F9BD7400095E6B3 /* AppDelegate.swift in Sources */,
 				C968056A1F9C144F00EE0FAB /* ScanViewController.swift in Sources */,
 				C988908A1F9BD7400095E6B3 /* FirstViewController.swift in Sources */,
+				0D5DBA441F9C33F000A57E9A /* BloodInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

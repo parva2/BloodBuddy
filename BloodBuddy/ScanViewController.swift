@@ -9,7 +9,11 @@
 import UIKit
 import AVFoundation
 import Vision
+import SwiftyUserDefaults
 
+extension DefaultsKeys {
+    static let hashValue = DefaultsKey<String?>("hashValue")
+}
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     var captureSession:AVCaptureSession?
@@ -19,6 +23,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     var resultString = ""
     
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,8 +84,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
 
                 
                 print(metadataObj.stringValue as! String)
+                Defaults[.hashValue] = metadataObj.stringValue as! String
                 performSegue(withIdentifier: "toData", sender: nil)
-                                captureSession?.stopRunning();
+                captureSession?.stopRunning();
             }
         }
     }

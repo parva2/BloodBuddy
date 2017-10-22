@@ -6,7 +6,8 @@ target 'BloodBuddy' do
   use_frameworks!
 
   # Pods for BloodBuddy
-	pod 'Eureka'
+	pod 'Eureka', '~> 4.0.0'
     pod 'SwiftQRCode'
     pod 'SwiftyUserDefaults'
+    pod 'Alamofire'
 end
