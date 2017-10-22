@@ -10,4 +10,5 @@ target 'BloodBuddy' do
     pod 'SwiftQRCode'
     pod 'SwiftyUserDefaults'
     pod 'Alamofire'
+    pod 'QRCode'
 end

@@ -49,12 +49,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             
             qrCodeFrameView = UIView()
             
-            if let qrCodeFrameView = qrCodeFrameView {
-                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-                qrCodeFrameView.layer.borderWidth = 2
-                self.view.addSubview(qrCodeFrameView)
-                self.view.bringSubview(toFront: qrCodeFrameView)
-            }
+            
             
             captureSession?.startRunning()
             
@@ -85,9 +80,16 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
                 
                 print(metadataObj.stringValue as! String)
                 Defaults[.hashValue] = metadataObj.stringValue as! String
+                dismiss(animated: true, completion: {
+                    print("done")
+                })
                 performSegue(withIdentifier: "toData", sender: nil)
                 captureSession?.stopRunning();
+                
             }
         }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        captureSession?.startRunning();
     }
 }
