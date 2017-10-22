@@ -15,7 +15,7 @@ class RedViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hi")
-        //print(history)
+        print(history)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,6 +44,7 @@ class RedViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return history.count
+        return 0
     }
 
     
