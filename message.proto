@@ -1,0 +1,17 @@
+syntax = "proto3";
+package TM09;
+
+option java_package = "com.mastercard.blockchain";
+option java_outer_classname = "BarebonesProtocolBuffer";
+
+message BloodAsset {
+	string bloodType = 1;
+	string sex = 2;
+	string ageRange = 3;
+	int32 date = 4;
+	int32 amount = 5;
+	int32 riskFactor = 6;
+	string medicalHistory = 7;
+	string locationHistory = 8;
+
+}
