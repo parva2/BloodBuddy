@@ -14,13 +14,14 @@
 		C923F9D01F9C7B7600B3B5B8 /* CreateSubmissionPart2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F9CF1F9C7B7600B3B5B8 /* CreateSubmissionPart2ViewController.swift */; };
 		C923F9D61F9C8EFC00B3B5B8 /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F9D51F9C8EFC00B3B5B8 /* RedViewController.swift */; };
 		C923F9D81F9C938B00B3B5B8 /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F9D71F9C938B00B3B5B8 /* BlueViewController.swift */; };
+		C923F9DA1F9CDF0600B3B5B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C923F9D91F9CDF0600B3B5B8 /* Assets.xcassets */; };
+		C923F9DC1F9CDF6D00B3B5B8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C923F9DB1F9CDF6D00B3B5B8 /* SearchViewController.swift */; };
 		C96805661F9C0FB200EE0FAB /* BloodPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96805651F9C0FB200EE0FAB /* BloodPageViewController.swift */; };
 		C968056A1F9C144F00EE0FAB /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96805691F9C144F00EE0FAB /* ScanViewController.swift */; };
 		C98890881F9BD7400095E6B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98890871F9BD7400095E6B3 /* AppDelegate.swift */; };
 		C988908A1F9BD7400095E6B3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98890891F9BD7400095E6B3 /* FirstViewController.swift */; };
 		C988908C1F9BD7400095E6B3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C988908B1F9BD7400095E6B3 /* SecondViewController.swift */; };
 		C988908F1F9BD7400095E6B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C988908D1F9BD7400095E6B3 /* Main.storyboard */; };
-		C98890911F9BD7400095E6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98890901F9BD7400095E6B3 /* Assets.xcassets */; };
 		C98890941F9BD7400095E6B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98890921F9BD7400095E6B3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		C923F9CF1F9C7B7600B3B5B8 /* CreateSubmissionPart2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSubmissionPart2ViewController.swift; sourceTree = "<group>"; };
 		C923F9D51F9C8EFC00B3B5B8 /* RedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		C923F9D71F9C938B00B3B5B8 /* BlueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		C923F9D91F9CDF0600B3B5B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../Library/Messages/Attachments/f9/09/58AAD925-55FF-4AA8-B3F7-B4A3DCEEF14B/Assets.xcassets"; sourceTree = "<group>"; };
+		C923F9DB1F9CDF6D00B3B5B8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C96805651F9C0FB200EE0FAB /* BloodPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPageViewController.swift; sourceTree = "<group>"; };
 		C96805691F9C144F00EE0FAB /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		C98890841F9BD7400095E6B3 /* BloodBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +46,6 @@
 		C98890891F9BD7400095E6B3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C988908B1F9BD7400095E6B3 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C988908E1F9BD7400095E6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C98890901F9BD7400095E6B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98890931F9BD7400095E6B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98890951F9BD7400095E6B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 		C98890861F9BD7400095E6B3 /* BloodBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				C923F9D91F9CDF0600B3B5B8 /* Assets.xcassets */,
 				C98890871F9BD7400095E6B3 /* AppDelegate.swift */,
 				C98890891F9BD7400095E6B3 /* FirstViewController.swift */,
 				C988908B1F9BD7400095E6B3 /* SecondViewController.swift */,
@@ -101,11 +104,11 @@
 				0D5DBA431F9C33F000A57E9A /* BloodInfoViewController.swift */,
 				C96805651F9C0FB200EE0FAB /* BloodPageViewController.swift */,
 				C96805691F9C144F00EE0FAB /* ScanViewController.swift */,
-				C98890901F9BD7400095E6B3 /* Assets.xcassets */,
 				C98890921F9BD7400095E6B3 /* LaunchScreen.storyboard */,
 				C98890951F9BD7400095E6B3 /* Info.plist */,
 				C923F9D51F9C8EFC00B3B5B8 /* RedViewController.swift */,
 				C923F9D71F9C938B00B3B5B8 /* BlueViewController.swift */,
+				C923F9DB1F9CDF6D00B3B5B8 /* SearchViewController.swift */,
 			);
 			path = BloodBuddy;
 			sourceTree = "<group>";
@@ -183,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C98890941F9BD7400095E6B3 /* LaunchScreen.storyboard in Resources */,
-				C98890911F9BD7400095E6B3 /* Assets.xcassets in Resources */,
+				C923F9DA1F9CDF0600B3B5B8 /* Assets.xcassets in Resources */,
 				C988908F1F9BD7400095E6B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +237,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftQRCode/SwiftQRCode.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
@@ -242,6 +246,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftQRCode.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 			);
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C923F9CE1F9C68C200B3B5B8 /* CreateSubmissionPart1VCViewController.swift in Sources */,
+				C923F9DC1F9CDF6D00B3B5B8 /* SearchViewController.swift in Sources */,
 				C988908C1F9BD7400095E6B3 /* SecondViewController.swift in Sources */,
 				C96805661F9C0FB200EE0FAB /* BloodPageViewController.swift in Sources */,
 				C98890881F9BD7400095E6B3 /* AppDelegate.swift in Sources */,

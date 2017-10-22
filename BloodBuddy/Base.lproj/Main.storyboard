@@ -445,17 +445,116 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="RMU-2u-5wa" kind="relationship" relationship="rootViewController" id="XGF-jk-5VO"/>
+                        <segue destination="IEG-8r-8Hb" kind="relationship" relationship="rootViewController" id="PQV-vO-fVp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXd-kA-zrc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="-625"/>
+            <point key="canvasLocation" x="-612" y="-625"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="MNc-Xd-9UL">
+            <objects>
+                <viewController id="IEG-8r-8Hb" customClass="SearchViewController" customModule="BloodBuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oky-dU-6lX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Blood ID" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mUS-2r-GzB" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="16" y="175" width="343" height="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedTitleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Blood Hash"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B8-yV-zHd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="pC9-D2-Loz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFG-Wm-EOb">
+                                <rect key="frame" x="297" y="233" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="pjt-JH-bb1"/>
+                                </constraints>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendHash:" destination="IEG-8r-8Hb" eventType="touchUpInside" id="RcF-XO-BdH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50007689" green="0.00061182957139999995" blue="0.00054492132040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fFG-Wm-EOb" firstAttribute="trailing" secondItem="mUS-2r-GzB" secondAttribute="trailing" id="21b-CY-xbw"/>
+                            <constraint firstItem="2B8-yV-zHd" firstAttribute="centerX" secondItem="mUS-2r-GzB" secondAttribute="centerX" id="5DP-cg-PsI"/>
+                            <constraint firstItem="v8v-IZ-bCk" firstAttribute="bottom" secondItem="fFG-Wm-EOb" secondAttribute="bottom" constant="291" id="BXU-yW-XQ9"/>
+                            <constraint firstItem="2B8-yV-zHd" firstAttribute="leading" secondItem="v8v-IZ-bCk" secondAttribute="leading" id="Fc8-oc-LAH"/>
+                            <constraint firstItem="v8v-IZ-bCk" firstAttribute="trailing" secondItem="mUS-2r-GzB" secondAttribute="trailing" constant="16" id="MHE-1Q-qkg"/>
+                            <constraint firstItem="v8v-IZ-bCk" firstAttribute="trailing" secondItem="2B8-yV-zHd" secondAttribute="trailing" id="OA6-Mt-b7d"/>
+                            <constraint firstItem="mUS-2r-GzB" firstAttribute="leading" secondItem="v8v-IZ-bCk" secondAttribute="leading" constant="16" id="c48-pQ-wAl"/>
+                            <constraint firstAttribute="trailing" secondItem="2B8-yV-zHd" secondAttribute="trailing" id="fQG-m9-Tos"/>
+                            <constraint firstItem="fFG-Wm-EOb" firstAttribute="top" secondItem="mUS-2r-GzB" secondAttribute="bottom" constant="14" id="i6s-Fg-5Dy"/>
+                            <constraint firstItem="2B8-yV-zHd" firstAttribute="top" secondItem="v8v-IZ-bCk" secondAttribute="top" id="naZ-UF-07y"/>
+                            <constraint firstItem="fFG-Wm-EOb" firstAttribute="trailing" secondItem="Oky-dU-6lX" secondAttribute="trailingMargin" id="rUC-PU-XZn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v8v-IZ-bCk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LLi-ra-psL">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-Camera_50" id="tJz-KI-EIU">
+                            <connections>
+                                <segue destination="RMU-2u-5wa" kind="show" id="DQ5-pz-ijo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="hashBox" destination="mUS-2r-GzB" id="IiJ-Rv-PRz"/>
+                        <segue destination="K2d-jE-tBa" kind="show" identifier="toInfo" id="4Vk-39-yiy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMw-PF-3lC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="-625.63718140929541"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-Plus Math Filled_50" width="25" height="25"/>
-        <image name="icons8-Plus Math_50" width="25" height="25"/>
+        <image name="icons8-Camera_50" width="25" height="25"/>
+        <image name="icons8-Plus Math Filled_50" width="37" height="37"/>
+        <image name="icons8-Plus Math_50" width="37" height="37"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4Vk-39-yiy"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.50007689" green="0.00061182957139999995" blue="0.00054492132040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

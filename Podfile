@@ -11,4 +11,5 @@ target 'BloodBuddy' do
     pod 'SwiftyUserDefaults'
     pod 'Alamofire'
     pod 'QRCode'
+    pod 'SkyFloatingLabelTextField'
 end
